@@ -48,7 +48,7 @@ function App() {
         path="/verify"
         element={<QuestionScreen patientData={patientData} onComplete={handleVerificationComplete}  appID={appID} />}
       />
-      <Route path="/result" element={<ResultScreen result={verificationResult} />} />
+      <Route path="/result" element={<ResultScreen result={verificationResult} appID={appID} />} />
     </Routes>
   );
 }

@@ -4,7 +4,7 @@ const connectToWebSocket = (onMessage) => {
 
   ws.onopen = () => {
     console.log('WebSocket connected');
-    ws.send(JSON.stringify({ type: 'request_id', appType: 'react' }));
+    ws.send(JSON.stringify({ type: 'request_id', appType: 'kiosk' }));
   };
 
   ws.onmessage = (event) => {

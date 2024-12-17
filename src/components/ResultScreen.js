@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './../css/ResultScreen.css';
 
-function ResultScreen({ result }) {
+
+function ResultScreen({ result, appID }) {
   const navigate = useNavigate();
 
   // Redirect to the main page after 3 seconds
@@ -15,8 +17,17 @@ function ResultScreen({ result }) {
   }, [navigate]);
 
   return (
+    <>
+    <div className="result-screen">
+      <div className="result-container">
+        <h1 className="result-title">Verification Complete</h1>
+        <p>Thank you for completing the verification process.</p>
+        <p>Please refer to the front desk receptionist for further assistance.</p>
+      </div>
+      {/* Kiosk ID */}
+      <p className="kiosk-id">Kiosk ID: {appID || 'Requesting ID from server...'}</p>
+    </div>
     <div>
-      <h1>Verification Complete</h1>
       <p>Result: {result.every((r) => r.isCorrect) ? 'Confirmed' : 'Not Confirmed'}</p>
       <h2>Details:</h2>
       <ul>
@@ -27,6 +38,7 @@ function ResultScreen({ result }) {
         ))}
       </ul>
     </div>
+    </>
   );
 }
 

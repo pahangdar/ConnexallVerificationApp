@@ -12,7 +12,7 @@ body{
 .context {
     width: 100%;
     position: absolute;
-    top:30vh;
+    top:20vh;
 }
 
 .context h1{
@@ -30,7 +30,7 @@ body{
 
 .kiosk-id {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     right: 20px;
     color: #ffffff;
     font-size: 0.9rem;

@@ -9,9 +9,9 @@ function WaitingScreen({ appID }) {
       <br></br>
       <h2>Please wait while we prepare your information.</h2>
       <h2>Once ready, kindly inform the front desk receptionist that you have arrived and are ready to check in.</h2>
+    </div>
       {/* Kiosk ID */}
       <p className="kiosk-id">Kiosk ID: {appID || 'Requesting ID from server...'}</p>
-    </div>
 
 
     <div class="area" >
